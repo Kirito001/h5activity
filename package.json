@@ -12,5 +12,9 @@
 	"devDependencies": {
 		"@vuepress/plugin-medium-zoom": "^1.7.1",
 		"vuepress": "^1.7.1"
+	},
+	"dependencies": {
+		"moment": "^2.29.1",
+		"save": "^2.4.0"
 	}
 }

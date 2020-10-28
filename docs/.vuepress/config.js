@@ -16,9 +16,20 @@ module.exports = {
 			sidebarDepth: 0,
 			children: [
 				['/essentials/size', '尺寸'],
-				['/essentials/unit', '单位']
+				['/essentials/unit', '单位'],
+				['/essentials/start', '快速开始']
+			]
+		}, {
+			title: '样式',
+			collapsable: false,
+			sidebarDepth: 0,
+			children: [
+				['/styles/spacing', '间距']
 			]
 		}]
+	},
+	locales: {
+		'/': { lang: 'zh-CN' }
 	},
 	plugins: {
 		'@vuepress/medium-zoom': {
@@ -26,6 +37,13 @@ module.exports = {
 			options: {
 				margin: 16,
 				background: 'rgba(255, 255, 255, .7)'
+			}
+		},
+		'@vuepress/last-updated': {
+			transformer: (timestamp, lang) => {
+				const moment = require('moment')
+				moment.locale(lang)
+				return moment(timestamp).fromNow()
 			}
 		}
 	}
