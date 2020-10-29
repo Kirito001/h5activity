@@ -24,7 +24,9 @@ module.exports = {
 			collapsable: false,
 			sidebarDepth: 0,
 			children: [
-				['/styles/spacing', '间距']
+				['/styles/colors', '颜色'],
+				['/styles/spacing', '间距'],
+				['/styles/text', '文本']
 			]
 		}]
 	},
@@ -32,6 +34,9 @@ module.exports = {
 		'/': { lang: 'zh-CN' }
 	},
 	plugins: {
+		scss: {
+			includePaths: ["../plugin/h5-activity.scss"]
+		},
 		'@vuepress/medium-zoom': {
 			selector: 'img.zoom-custom-imgs',
 			options: {

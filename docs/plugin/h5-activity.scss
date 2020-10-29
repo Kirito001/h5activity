@@ -1,0 +1,89 @@
+$spacing: 0.533333vw;			// 基础间距4px，以 4/750 的倍数作为间距划分
+$fontSize: 20 / 7.5;			// 最小字体20px，以2的倍数增加
+
+html, body {
+	font-family: GT-Walsheim, "Neue Helvetica W02", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+// spacing start
+.ma-auto {
+	margin: auto;
+}
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+.my-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.ml-auto {
+	margin-left: auto;
+}
+.mr-auto {
+	margin-right: auto;
+}
+.mt-auto {
+	margin-top: auto;
+}
+.mb-auto {
+	margin-bottom: auto;
+}
+
+@for $i from 0 through 12 {
+	.ma-#{$i} {
+		margin: $spacing * $i;
+	}
+	.mx-#{$i} {
+		margin-left: $spacing * $i;
+		margin-right: $spacing * $i;
+	}
+	.my-#{$i} {
+		margin-top: $spacing * $i;
+		margin-bottom: $spacing * $i;
+	}
+	.ml-#{$i} {
+		margin-left: $spacing * $i;
+	}
+	.mr-#{$i} {
+		margin-right: $spacing * $i;
+	}
+	.mt-#{$i} {
+		margin-top: $spacing * $i;
+	}
+	.mb-#{$i} {
+		margin-bottom: $spacing * $i;
+	}
+	.pa-#{$i} {
+		padding: $spacing * $i;
+	}
+	.px-#{$i} {
+		padding-left: $spacing * $i;
+		padding-right: $spacing * $i;
+	}
+	.py-#{$i} {
+		padding-top: $spacing * $i;
+		padding-bottom: $spacing * $i;
+	}
+	.pl-#{$i} {
+		padding-left: $spacing * $i;
+	}
+	.pr-#{$i} {
+		padding-right: $spacing * $i;
+	}
+	.pt-#{$i} {
+		padding-top: $spacing * $i;
+	}
+	.pb-#{$i} {
+		padding-bottom: $spacing * $i;
+	}
+}
+// spacing end
+
+// font start
+@for $i from 0 through 22 {
+	.fs-#{20 + $i * 2} {
+		font-size: $fontSize + 2 * $i / 7.5 + vw;
+	}
+}
+// font end
