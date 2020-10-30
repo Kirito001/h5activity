@@ -4,6 +4,10 @@ $fontSize: 20 / 7.5;			// 最小字体20px，以2的倍数增加
 html, body {
 	font-family: GT-Walsheim, "Neue Helvetica W02", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+select {
+	min-width: 100px;
+	height: 30px;
+}
 
 // spacing start
 .ma-auto {
@@ -85,5 +89,20 @@ html, body {
 	.fs-#{20 + $i * 2} {
 		font-size: $fontSize + 2 * $i / 7.5 + vw;
 	}
+	.lh-#{20 + $i * 2} {
+		line-height: $fontSize + 2 * $i / 7.5 + vw;
+	}
+}
+.lh-auto {
+	line-height: initial;
+}
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
 }
 // font end

@@ -7,6 +7,16 @@ title: '间距'
 以4px为基础间距，也就是 `4 / 750 * 100` 的倍数作为间距划分，每个等级都是4的倍数；
 比如，设计图上元素的实际margin是24，对应的样式就是 `class="ma-6"`
 
+- `m` = `margin`
+- `p` = `padding`
+- `a` = `上下左右`
+- `x` = `左右两边`
+- `y` = `上下两边`
+- `l` = `左边，left 的缩写`
+- `r` = `右边，right 的缩写`
+- `t` = `上边，top 的缩写`
+- `b` = `下边，bottom 的缩写`
+
 m <select v-model="marginDirection">
 	<option>a</option>
 	<option>x</option>
@@ -38,17 +48,6 @@ p <select v-model="paddingDirection">
 		<div class="act-padding">m{{marginDirection}}-{{marginSize}} p{{paddingDirection}}-{{paddingSize}}</div>
 	</div>
 </div>
-
-- `m` = `margin`
-- `p` = `padding`
-
-- `a` = `上下左右`
-- `x` = `左右两边`
-- `y` = `上下两边`
-- `l` = `左边，left 的缩写`
-- `r` = `右边，right 的缩写`
-- `t` = `上边，top 的缩写`
-- `b` = `下边，bottom 的缩写`
 
 <script>
 export default {
