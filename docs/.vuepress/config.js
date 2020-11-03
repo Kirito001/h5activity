@@ -11,22 +11,25 @@ module.exports = {
 		displayAllHeaders: true,
 		smoothScroll: true,
 		sidebar: [{
-			title: '必看前提',
+			title: '必看',
 			collapsable: false,
 			sidebarDepth: 0,
 			children: [
-				['/essentials/size', '尺寸'],
 				['/essentials/unit', '单位'],
-				['/essentials/start', '快速开始']
+				['/essentials/size', '使用前提'],
+				['/essentials/start', '现在开始']
 			]
 		}, {
 			title: '样式',
 			collapsable: false,
 			sidebarDepth: 0,
 			children: [
-				['/styles/colors', '颜色'],
-				['/styles/spacing', '间距'],
-				['/styles/text', '文本']
+				['/styles/colors', '颜色（color）'],
+				['/styles/spacing', '间距（spacing）'],
+				['/styles/text', '文本（font）'],
+				['/styles/display', '显示（display）'],
+				['/styles/border', '边框（border）'],
+				['/styles/flex', '弹性布局（flex）']
 			]
 		}]
 	},

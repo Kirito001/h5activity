@@ -1,5 +1,6 @@
-$spacing: 0.533333vw;			// 基础间距4px，以 4/750 的倍数作为间距划分
-$fontSize: 20 / 7.5;			// 最小字体20px，以2的倍数增加
+$spacing: 0.533333vw;		// 基础间距4px，以 4/750 的倍数作为间距划分
+$fontSize: 20 / 7.5;		// 最小字体20px，以2的倍数增加，转换为vw
+$border: 4;			// 边框以4px为基数倍增
 
 html, body {
 	font-family: GT-Walsheim, "Neue Helvetica W02", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9,6 +10,16 @@ select {
 	height: 30px;
 }
 
+// color start
+$color: (#f44336, #e91e63, #9c27b0, #673ab7, #3f51b5, #2196f3, #03a9f4, #00bcd4, #009688, #4caf50, #8bc34a, #cddc39, #ffeb3b, #ffc107, #ff9800, #ff5722, #795548, #9e9e9e, #607d8b);
+$colorName: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey');
+// color end
+@for $i from 1 through 19 {
+	.#{nth($colorName, $i)} {
+		color: #ffffff;
+		background-color: nth($color, $i)
+	}
+}
 // spacing start
 .ma-auto {
 	margin: auto;
@@ -105,4 +116,121 @@ select {
 .text-right {
 	text-align: right;
 }
+.text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.fw-black {
+	font-weight: 900;
+}
+.fw-bold {
+	font-weight: 700;
+}
+.fw-medium {
+	font-weight: 500;
+}
+.fw-regular {
+	font-weight: 400;
+}
+.fw-light {
+	font-weight: 300;
+}
+.fw-thin {
+	font-weight: 100;
+}
+.fw-italic {
+	font-style: italic;
+}
 // font end
+
+// display start
+.d-none {
+	display: none;
+}
+.d-inline {
+	display: inline;
+}
+.d-block {
+	display: block;
+}
+.d-inline-block {
+	display: inline-block;
+}
+.d-flex {
+	display: flex;
+}
+.d-table {
+	display: table;
+}
+.d-table-row {
+	display: table-row;
+}
+.d-table-cell {
+	display: table-cell;
+}
+// display end
+
+// border start
+@for $i from 1 to 10 {
+	.rounded-#{$i} {
+		border-radius: $i * $border / 7.5 + vw;
+	}
+	.outline-#{$i} {
+		border-style: solid;
+		border-color: rgba(0, 0, 0, 0.2);
+		border-width: $i * $border / 7.5 + vw;
+	}
+}
+.rounded-pill {
+	border-radius: 100vw;
+}
+.outline {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+// border end
+
+// flex start
+.flex-row {
+	flex-direction: row;
+}
+.flex-row-reverse {
+	flex-direction: row-reverse;
+}
+.flex-column {
+	flex-direction: column;
+}
+.flex-column-reverse {
+	flex-direction: column-reverse;
+}
+.justify-start {
+	justify-content: flex-start;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-end{
+	justify-content: flex-end;
+}
+.justify-space-b {
+	justify-content: space-between;
+}
+.justify-space-a {
+	justify-content: space-around;
+}
+.align-start {
+	align-items: flex-start;
+}
+.align-center {
+	align-items: center;
+}
+.align-end {
+	align-items: flex-end;
+}
+.align-baseline {
+	align-items: baseline;
+}
+.align-stretch {
+	align-items: stretch;
+}
+// flex end
