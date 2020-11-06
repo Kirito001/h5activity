@@ -29,7 +29,8 @@ module.exports = {
 				['/styles/text', '文本（font）'],
 				['/styles/display', '显示（display）'],
 				['/styles/border', '边框（border）'],
-				['/styles/flex', '弹性布局（flex）']
+				['/styles/flex', '弹性布局（flex）'],
+				['/styles/grids', '非响应式栅格（col）']
 			]
 		}]
 	},
