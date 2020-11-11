@@ -6,10 +6,10 @@ title: '颜色'
 
 `h5Activity` 提供了以下背景颜色，可以直接使用，例如 `class="red"`
 
-文字颜色需要在背景颜色后面加上后缀 `-text`，例如 `red-text`
+文字颜色需要在背景颜色后面加上后缀 `-text`，例如 `class="red-text"`
 
 <template>
-<div class="d-flex">
+<div class="row mt-3">
 	<div v-for="(item, i) in colorName" class="col-6 pa-2 d-flex flex-column" :class="item">
 		<span class="mb-2">{{ item }}</span>
 		<span>{{ color[i] }}</span>
@@ -28,6 +28,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../plugin/h5-activity.scss';
+<style lang="scss" scoped>
+@import '../plugin/h5activity.scss';
 </style>

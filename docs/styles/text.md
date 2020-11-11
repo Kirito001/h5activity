@@ -49,12 +49,13 @@ lh- <select v-model="lineHeight">
 
 ### 文字不换行，超过长度省略
 
-`class="text-truncate"`
+<br/>`class="text-truncate"`
 
 <p class="text-truncate">文字不换行，超过长度省略文字不换行，超过长度省略文字不换行，超过长度省略文字不换行，超过长度省略文字不换行，超过长度省略文字不换行，超过长度省略</p>
 
 ### 文字粗细和斜体
 
+<br/>
 <p class="fw-black">class="fw-black" 最粗</p>
 <p class="fw-bold">class="fw-bold" 700粗细</p>
 <p class="fw-medium">class="fw-medium" 500粗细</p>
@@ -80,6 +81,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../plugin/h5-activity.scss';
+<style lang="scss" scoped>
+@import '../plugin/h5activity.scss';
 </style>

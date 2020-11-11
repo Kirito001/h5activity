@@ -124,6 +124,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../plugin/h5-activity.scss';
+<style lang="scss" scoped>
+@import '../plugin/h5activity.scss';
 </style>

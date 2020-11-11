@@ -4,7 +4,7 @@ title: '间距'
 
 # 间距
 
-以4px为基础间距，也就是 `4 / 750 * 100` 的倍数作为间距划分，每个等级都是4的倍数；
+以4px为基础间距，也就是 `4 / 750 * 100` 的倍数作为间距划分，每个等级都是4的倍数；总共分了16个等级，最高等级64px；
 比如，设计图上元素的实际margin是24，对应的样式就是 `class="ma-6"`
 
 - `m` = `margin`
@@ -28,7 +28,8 @@ m <select v-model="marginDirection">
 </select>-
 <select v-model="marginSize">
 	<option>auto</option>
-	<option v-for="(item, i) in 12">{{i}}</option>
+	<option v-for="(item, i) in 17">{{i}}</option>
+	<option v-for="(item, i) in 17">n{{i}}</option>
 </select>
 
 p <select v-model="paddingDirection">
@@ -41,7 +42,7 @@ p <select v-model="paddingDirection">
 	<option>b</option>
 </select>-
 <select v-model="paddingSize">
-	<option v-for="(item, i) in 13">{{i}}</option>
+	<option v-for="(item, i) in 17">{{i}}</option>
 </select>
 <div class="act-margin">
 	<div class="content" :class="`m${marginDirection}-${marginSize} p${paddingDirection}-${paddingSize}`">
@@ -63,11 +64,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../plugin/h5-activity.scss';
+@import '../plugin/h5activity.scss';
 
 .act-margin {
 	background-color: #ffcc80;
-	overflow:hidden;
+	border: 1px solid transparent;
 }
 .act-padding {
 	background-color: #eee;
