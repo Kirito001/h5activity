@@ -25,13 +25,13 @@ $colorName: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-bl
 @for $i from 1 through 21 {
 	.#{nth($colorName, $i)} {
 		@if $i == 20 {
-			color: rgba(0, 0, 0, 0.8);
+			color: rgba(0, 0, 0, 0.8)!important;
 		} @else if $i == 13 {
-			color: rgba(0, 0, 0, 0.8);
+			color: rgba(0, 0, 0, 0.8)!important;
 		} @else {
-			color: #ffffff;
+			color: #ffffff!important;
 		}
-		background-color: nth($color, $i);
+		background-color: nth($color, $i)!important;
 	}
 	.#{nth($colorName, $i)}-text {
 		color: nth($color, $i);
