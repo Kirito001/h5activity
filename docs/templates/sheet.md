@@ -13,22 +13,26 @@ title: '纸片'
 ### 参数
 
 #### width
-- 类型： `number`
-- 默认值： `0`
+- 类型： `Number`
+- 默认值： `100%`
 
 #### height
-- 类型： `number`
+- 类型： `Number`
 - 默认值： `0`
 
 #### color
-- 类型: `string`
+- 类型: `String`
 - 默认值: `transparent`
+
+#### src
+- 类型: `String`
+- 默认值: `无`
 
 #### absolute
 - 类型: `Boolean`
 - 默认值: `false`
 
-当使用这个属性时，该组件的 `z-index: 99` 如果没有这个属性就默认为 `position: relative` 并且 `z-index: 0`
+当使用这个属性时，纸片的 `z-index: 99` 如果没有这个属性，纸片就默认为 `position: relative` 并且 `z-index: 0`
 
 ``` html
 <a-sheet class="d-flex justify-center align-center fs-24" color="blue" height="80">hello h5activity</a-sheet>

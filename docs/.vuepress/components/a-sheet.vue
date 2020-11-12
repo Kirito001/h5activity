@@ -7,18 +7,6 @@
 <script>
 export default {
 	name: 'a-sheet',
-    data() {
-        return {
-            style: {
-                'width': this.getWidth(),
-                'height': this.getHeight(),
-                'background-color': this.color,
-                'position': this.absolute && 'absolute',
-                'z-index': this.absolute && 99,
-				'background-image': 'url(' + this.src + ')'
-            }
-        }
-    },
 	props: {
         absolute: {
             type: Boolean,
@@ -32,6 +20,18 @@ export default {
 		width: 0,
 		src: String
 	},
+    data() {
+        return {
+            style: {
+                'width': this.getWidth(),
+                'height': this.getHeight(),
+                'background-color': this.color,
+                'position': this.absolute && 'absolute',
+                'z-index': this.absolute && 99,
+				'background-image': 'url(' + this.src + ')'
+            }
+        }
+    },
 	methods: {
 		getWidth() {
 			return this.width / 7.5 + 'vw'

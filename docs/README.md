@@ -10,6 +10,6 @@ features:
 - title: 专一
   details: 只为编写h5活动页而生，满足h5的任意布局。
 - title: 简单
-  details: 丰富的组件和基础样式，基本上你不用手写样式，上手简单。
+  details: 丰富的组件和基础样式库，几乎无需手写样式，上手简单。
 footer: Copyright © 2020/10-present Roy
 ---

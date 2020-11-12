@@ -1,8 +1,9 @@
 // author: fhluo; version: 1.0-beta
-$spacing: 0.533333vw;		// 基础间距4px，以 4/750 的倍数作为间距划分
-$fontSize: 20 / 7.5;		// 最小字体20px，以2的倍数增加，转换为vw
-$border: 2;					// 边框以2px为基数倍增
-$rounded: 4;				// 圆角以4px伪基础倍增
+$design-size: 750 / 100vw;		// 设计图总宽度1%的尺寸
+$spacing: 4 / $design-size;		// 基础间距4px，以 4/750 的倍数作为间距划分
+$font-size: 20 / $design-size;	// 最小字体20px，以2的倍数增加，转换为vw
+$border: 2;						// 边框以2px为基数倍增
+$rounded: 4;					// 圆角以4px伪基础倍增
 
 // base style start
 html, body, p, h1, h2, h3, h4, h5, h6 {
@@ -13,9 +14,9 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
 img {
 	vertical-align: middle;
 }
-select {
-	min-width: 100px;
-	height: 30px;
+button, input, select, textarea {
+    background-color: transparent;
+    border-style: none;
 }
 // base style end
 
@@ -140,10 +141,10 @@ $colorName: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-bl
 // font start
 @for $i from 0 through 22 {
 	.fs-#{20 + $i * 2} {
-		font-size: $fontSize + 2 * $i / 7.5 + vw;
+		font-size: $font-size + 2 * $i / $design-size;
 	}
 	.lh-#{20 + $i * 2} {
-		line-height: $fontSize + 2 * $i / 7.5 + vw;
+		line-height: $font-size + 2 * $i / $design-size;
 	}
 }
 .lh-auto {
@@ -216,12 +217,12 @@ $colorName: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-bl
 // border start
 @for $i from 1 through 12 {
 	.rounded-#{$i} {
-		border-radius: $i * $rounded / 7.5 + vw;
+		border-radius: $i * $rounded / $design-size;
 	}
 	.outline-#{$i} {
 		border-style: solid;
 		border-color: rgba(0, 0, 0, 0.2);
-		border-width: $i * $border / 7.5 + vw;
+		border-width: $i * $border / $design-size;
 	}
 }
 .rounded-pill {

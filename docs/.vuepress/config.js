@@ -82,6 +82,13 @@ module.exports = {
 				['/templates/button', '按钮（a-btn）'],
 				['/templates/images', '图片（a-img）']
 			]
+		}, {
+			title: '指令',
+			collapsable: false,
+			sidebarDepth: 0,
+			children: [
+				['/directives/ripple', '波纹（ripple）']
+			]
 		}]
 	},
 	locales: {
