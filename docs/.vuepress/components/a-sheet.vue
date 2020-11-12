@@ -1,5 +1,5 @@
 <template>
-	<div :class="color" :style="style">
+	<div class="a-sheet" :class="color" :style="style">
 		<slot></slot>
 	</div>
 </template>
@@ -13,22 +13,24 @@ export default {
                 'width': this.getWidth(),
                 'height': this.getHeight(),
                 'background-color': this.color,
-                'position': this.absolute ? 'absolute' : 'relative',
-                'z-index': this.absolute ? '99' : '0'
+                'position': this.absolute && 'absolute',
+                'z-index': this.absolute && 99,
+				'background-image': 'url(' + this.src + ')'
             }
         }
     },
 	props: {
-		width: 0,
-		height: 0,
+        absolute: {
+            type: Boolean,
+            default: false
+        },
 		color: {
 			type: String,
 			default: 'transparent'
 		},
-        absolute: {
-            type: Boolean,
-            default: false
-        }
+		height: 0,
+		width: 0,
+		src: String
 	},
 	methods: {
 		getWidth() {
@@ -40,3 +42,13 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+	.a-sheet {
+		background-size: 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 0;
+	}
+</style>
