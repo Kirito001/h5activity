@@ -22,4 +22,4 @@ title: 单位
 
 ### 游览器兼容
 <br/>
-<img class="zoom-custom-imgs" src="/available.png" />
+<img class="zoom-custom-imgs" :src="$withBase('/available.png')" />
