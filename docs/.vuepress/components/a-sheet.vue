@@ -16,8 +16,8 @@ export default {
 			type: String,
 			default: 'transparent'
 		},
-		height: 0,
-		width: 0,
+		height: String,
+		width: String,
 		src: String
 	},
     data() {
@@ -34,10 +34,10 @@ export default {
     },
 	methods: {
 		getWidth() {
-			return this.width / 7.5 + 'vw'
+			return this.width && this.width / 7.5 + 'vw'
 		},
 		getHeight() {
-			return this.height / 7.5 + 'vw'
+			return this.height && this.height / 7.5 + 'vw'
 		}
 	}
 }

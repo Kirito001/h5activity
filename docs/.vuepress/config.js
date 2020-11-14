@@ -1,7 +1,7 @@
 module.exports = {
-	base: '/h5-activity/',
+	base: '/h5activity/',
 	dest: 'dist',
-	title: 'h5activity',
+	title: 'h5activity-bate',
 	description: '专为H5活动页而生，开发H5更快捷方便',
 	head: [
 		[ 'link', { rel: 'icon', href: '/fav.png' } ]
@@ -46,6 +46,12 @@ module.exports = {
 			}, {
 				text: '图片（a-img）',
 				link: '/templates/images'
+			}]
+		}, {
+			text: '指令',
+			items: [{
+				text: '波纹（ripple）',
+				link: '/directives/ripple'
 			}]
 		}, {
 			text: 'GitHub',

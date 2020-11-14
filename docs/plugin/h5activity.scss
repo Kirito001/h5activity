@@ -217,7 +217,7 @@ $colorName: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-bl
 // border start
 @for $i from 1 through 12 {
 	.rounded-#{$i} {
-		border-radius: $i * $rounded / $design-size;
+		border-radius: $i * $rounded / $design-size !important;
 	}
 	.outline-#{$i} {
 		border-style: solid;
@@ -225,8 +225,11 @@ $colorName: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-bl
 		border-width: $i * $border / $design-size;
 	}
 }
+.rounded-tile {
+	border-radius: 0!important;
+}
 .rounded-pill {
-	border-radius: 100vw;
+	border-radius: 100vw!important;
 }
 .outline {
 	border: 1px solid rgba(0, 0, 0, 0.2);
