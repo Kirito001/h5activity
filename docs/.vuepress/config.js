@@ -1,5 +1,5 @@
 module.exports = {
-	base: '/h5activity/',
+	base: '/h5activity/dist/',
 	dest: 'dist',
 	title: 'h5activity-bate',
 	description: '专为H5活动页而生，开发H5更快捷方便',
