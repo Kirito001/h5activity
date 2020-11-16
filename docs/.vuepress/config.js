@@ -44,8 +44,11 @@ module.exports = {
 				text: '按钮（a-btn）',
 				link: '/templates/button'
 			}, {
-				text: '图片（a-img）',
+				text: '图象（a-img）',
 				link: '/templates/images'
+			}, {
+				text: '遮罩层（a-layer）',
+				link: '/templates/layer'
 			}]
 		}, {
 			text: '指令',
@@ -86,7 +89,8 @@ module.exports = {
 			children: [
 				['/templates/sheet', '纸片（a-sheet）'],
 				['/templates/button', '按钮（a-btn）'],
-				['/templates/images', '图片（a-img）']
+				['/templates/images', '图象（a-img）'],
+				['/templates/layer', '遮罩层（a-layer）']
 			]
 		}, {
 			title: '指令',

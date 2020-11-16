@@ -6,6 +6,10 @@ title: '按钮'
 
 最常用的组件之一，几乎出现在每个页面
 
+::: tip 注意
+宽高属性的值不需要写单位，否者会失效
+:::
+
 ### 参数
 
 #### color
@@ -24,7 +28,7 @@ title: '按钮'
 
 #### height
 - 类型: `Number`
-- 默认值: `72`
+- 默认值: `80`
 
 #### shade
 - 类型: `Boolean`
@@ -64,6 +68,7 @@ title: '按钮'
 ``` vue
 <template>
 	<a-btn class="mb-3" :color="item" v-for="item in color" shade tile>CLIKE ME</a-btn>
+	<a-btn color="indigo" :color="item" v-for="item in color" fab rounded shade tile>fab</a-btn>
 </template>
 
 <script>
@@ -78,8 +83,9 @@ export default {
 ```
 
 <template>
-<a-btn class="mb-3" :color="item" v-for="item in color" shade tile block>CLIKE ME</a-btn>
+<a-btn class="mb-4" :color="item" v-for="item in color" shade tile>CLIKE ME</a-btn>
 <a-btn color="indigo" :color="item" v-for="item in color" fab rounded shade tile>fab</a-btn>
+
 </template>
 
 <script>
@@ -91,3 +97,10 @@ export default {
 	}
 }
 </script>
+
+<style lang="scss" scoped>
+@import '../plugin/h5activity.scss';
+p {
+    margin: inherit
+}
+</style>

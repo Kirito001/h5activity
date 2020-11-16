@@ -58,40 +58,4 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../plugin/h5activity.scss';
-
-@media screen and (min-width: 1280px) {
-	$design-size: 1920 / 100vw;
-}
-.a-btn {
-	color: #ffffff;
-	height: 72 / $design-size;
-	font-size: 28 / $design-size;
-	line-height: 28 / $design-size;
-	padding-left: 8 * $spacing;
-	padding-right: 8 * $spacing;
-	border-radius: 8 / $design-size;
-	font-weight: 500;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #EEEEEE;
-	border: none;
-	outline: none;
-	user-select: none;
-	.a-btn__content {
-		z-index: 1;
-	}
-	&.a-btn-shade {
-		box-shadow: 0 (6/$design-size) (2/$design-size) (-6/$design-size) rgba(0, 0, 0, .2),
-					0 (4/$design-size) (4/$design-size) 0 rgba(0, 0, 0, .14),
-					0 (2/$design-size) (10/$design-size) 0 rgba(0, 0, 0, .12)!important;
-	}
-	&.a-btn-outlined {
-		border: thin solid;
-	}
-	&.a-btn-fab {
-		height: 96 / $design-size;
-		width: 96 / $design-size;
-	}
-}
 </style>
